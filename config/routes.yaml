@@ -1,0 +1,7 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+# new_image:
+#     path: /image/new
+#     controller: App\Controller\ImageController::new
+#     methods: [POST]

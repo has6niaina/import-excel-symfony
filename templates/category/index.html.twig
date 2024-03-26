@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	category
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<h1>Category Managing</h1>
+
+			<div id="loader">
+				<div class="loading"></div>
+			</div>
+			<div id="alert-div">
+				{# vide #}
+			</div>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Nom du catalogue</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody id="category-table-body">
+			
+			</tbody>
+		</table>
+		<button class="btn btn-primary" id="createCategory">Create new</button>
+		{% include "category/category.html.twig" %}
+		<div>
+		</div>
+	</div>
+		
+{% endblock %}

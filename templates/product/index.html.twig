@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Product
+{% endblock %}
+
+{% block body %}
+<div class="container">
+	<h2 class="text-center mt-5 mb-3">Product Managing</h2>
+	<div class="card">
+		<div class="card-header">
+			<button class="btn btn-outline-primary" id="createProduct">
+				Cree un produit
+			</button>
+		</div>
+		<div class="card-body">
+			<div id="alert-div">
+				{# alert ici #}
+			</div>
+			<table class="table table-striped" style="width:100%">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Nom</th>
+						<th>Description</th>
+						<th>category</th>
+						<th>Image</th>
+						<th>Gallerie</th>
+						<th width="240px">Actions</th>
+					</tr>
+				</thead>
+				<tbody id="product-table-body">
+					{# afficher les produits ici #}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+{% include "product/product.html.twig" %}
+{% endblock %}
+

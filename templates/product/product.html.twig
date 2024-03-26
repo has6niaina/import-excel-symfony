@@ -1,0 +1,68 @@
+{# modal pour la creation de produit et edition de produit #}
+<div class="modal" tabindex="-1" id="form-modal">
+        <div class="modal-dialog" >
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Product Form</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="error-div"></div>
+                <form method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="id" id="id">
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input type="text" class="form-control" id="nom" name="nom">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Image:</label>
+                        <div id="image-preview">
+                            <label id="image-label" for="product_imageFile">Choisir Une Image:</label> 
+                            <div class="custom-file">
+                                <input type="file" id="image" name="image" lang="en" class="custom-file-input" />
+                                <label for="product_imageFile"  class="custom-file-label"></label>
+                            </div>
+                        </div>
+                    </div>	
+
+                    <div class="form-group">
+                        <label for="category">Catégorie</label>
+                        <select class="form-control" id="category" name="category">
+                        <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="description" rows="3" name="description"></textarea>
+                    </div>
+                   
+                    <button type="submit" class="btn btn-outline-primary mt-3" id="save-product-btn">Enregistrer</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+   
+    
+ {# modal pour afficher le produit #}
+    <div class="modal" tabindex="-1" id="view-modal">
+        <div class="modal-dialog" >
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Project Information</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <b>Nom:</b>
+                <p id="nom-info"></p>
+				<b>Image: </b>
+				<p id="image-info"></p>
+                <b>Description:</b>
+                <p id="description-info"></p>
+                <b>Category:</b>
+                <p id="category-info"></p>
+            </div>
+            </div>
+        </div>
+    </div>
